@@ -1,14 +1,18 @@
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+// Screens
 import HomeScreen from "./screens/HomeScreen"
 import ProductScreen from "./screens/ProductScreen"
 import CartScreen from "./screens/CartScreen"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+//components
+import Navbar from './components/Navbar'
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        {/* Navbar */}
+        <Navbar/>
         {/* SideDrawer */}
         {/* Backdrop */}
         <main>
@@ -18,7 +22,6 @@ function App() {
             <Route exact path="/cart" component={CartScreen} />
           </Switch>
         </main>
-      </div>
     </Router>
   );
 }
